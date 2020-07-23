@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+
+    <style>
+        .container {
+            background-color: khaki;
+            padding: 20px 20px;
+        }
+
+        .btncolor{
+                height:20px;
+                width:20px ;
+        }
+
+        #blue{
+            background-color: #AED6F1;/* blue;*/
+        }
+        #pink{
+            background-color:  #E891BB;/* pink;*/
+        }
+        #red{
+            background-color: #F5B7B1;/*red;*/
+        }
+        #green{
+            background-color: #ABEBC6;/* green;*/
+        }
+    </style>
+
+    <script>
+        
+        function validateform() 
+        {
+            var msg="Please Enter";
+           var fname = document.getElementById('fname').value;
+           var mname = document.getElementById('mname').value;
+           var lname = document.getElementById('lname').value;
+           var gender = document.getElementById('gender').value;
+           var contact = document.getElementById('contact').value;
+           var email = document.getElementById('email').value;
+           var address = document.getElementById('address').value;
+
+            if(fname=="" || fname==null)
+            {
+                // alert('Please Enter First Name');
+                msg = msg+' First Name\n';
+                // return false;
+            }    
+
+            if(mname=="" || mname==null)
+            {
+                // alert('Please Enter Middle Name');
+                // return false;
+                msg = msg+' Middle Name\n';
+            }
+             
+            if(lname=="" || lname==null)
+            {
+                // alert('Please Enter Last Name');
+                // return false;
+                msg = msg+' Last Name\n';
+            } 
+
+            if(contact=="" || contact==null)
+            {
+                // alert('Please Enter Last Name');
+                // return false;
+                msg = msg+' contact\n';
+            } 
+            
+            if(email=="" || email==null)
+            {
+                // alert('Please Enter Last Name');
+                // return false;
+                msg = msg+' email\n';
+            } 
+
+            if(address=="" || address==null)
+            {
+                // alert('Please Enter Last Name');
+                // return false;
+                msg = msg+' Address\n';
+            } 
+
+            if(contact.length!=10)
+            {
+                msg = msg+' Valid Contact\n';
+            } 
+            
+
+            if(msg!="Please Enter")
+            {
+                alert(msg);
+                return false;
+            }
+        }
+
+       
+    </script>
+</head>
+
+<body>
+
+    <div id="container" class="container">
+
+
+        <button class="btncolor"  id="blue"></button>
+        <button class="btncolor" id="pink"></button>
+        <button class="btncolor" id="red"></button>
+        <button class="btncolor" id="green"></button>
+
+        <h1>Student Registration</h1>
+        <form action="" onsubmit="return validateform();" method="GET" autocomplete="off" title="Student Registration Form">
+            <div class="row">
+                <div class="col-md-5">
+                    <label for="">First Name</label>
+                    <input type="text" name="fname" id="fname" value="" placeholder="First Name" class="form-control" >
+
+                    <label for="">Middle Name</label>
+                    <input type="text" name="mname" id="mname" placeholder="Middle Name" class="form-control" >
+                    <label for="">Last Name</label>
+                    <input type="text" name="lname" id="lname" placeholder="Last Name" class="form-control" >
+                    <label for="">Gender</label>
+                    <select name="gender" id="gender" class="form-control">
+                        <option value="">Male</option>
+                        <option value="">Female</option>
+                    </select>
+
+                    <label for="">Contact</label>
+                    <input type="tel" name="contact" id="contact" placeholder="Contact Name" class="form-control"
+                        >
+
+                    <label for="">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email Name" class="form-control"
+                        >
+
+                    <label for="address">Address</label><br>
+                    <textarea name="address" id="address" cols="30" rows="5" class="form-control" ></textarea>
+
+                    <br>
+                    <div class="form-group">
+                        <input type="submit"  value="Submit" class="btn btn-success">
+                        <input type="reset" value="Clear" class="btn btn-light">
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        //  var container=document.getElementById('container');
+
+        /*  container.addEventListener('click',func_click);
+  
+          function func_click()
+          {
+              console.log("Mouse Clicked..");
+          }
+      */
+
+        // container.addEventListener('click',function(){
+        //     console.log('Mouse clicked');
+        // });
+       
+       
+        blue.addEventListener('click',function(){
+                container.style.background='#AED6F1';
+                container.style.color='black';
+        });
+
+        var pink=document.getElementById('pink');
+        pink.addEventListener('click',function(){
+                container.style.background='#E891BB';
+                container.style.color='white';
+        });  
+
+         red.addEventListener('click',function(){
+                container.style.background='#F5B7B1';
+         });
+
+         green.addEventListener('click',function(){
+                container.style.background='#ABEBC6';
+         });
+
+    </script>
+</body>
+
+</html>
